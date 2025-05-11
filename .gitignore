@@ -76,6 +76,8 @@ predictions.csv
 DEPLOYMENT_INSTRUCTIONS.md
 oil_price_prediction (1).ipynb
 OIL_PRICE_PREDICTION_HYBRID_ARIMA_LSTM_DOCUMENTATION.md
+OIL_PRICE_PREDICTION_HYBRID_ARIMA_LSTM_DOCUMENTATION.md
+oil_price_prediction (1).ipynb
 # --- Explicitly include main files ---
 !main.py
 !requirements.txt
