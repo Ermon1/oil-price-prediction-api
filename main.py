@@ -25,9 +25,9 @@ logger = logging.getLogger(__name__)
 warnings.filterwarnings('ignore')
 
 
+
 # --- CONFIG ---
-# --- CONFIG ---
-CSV_FILE_PATH = "/kaggle/input/crude-oil-price-prediction/Crude oil.csv"  # ✅ Exact filename
+CSV_FILE_PATH = "/kaggle/input/crude-oil-price-prediction/Crude oil.csv"  
 MODEL_PATH = "/kaggle/working/lstm_model.h5"
 SCALER_PATH = "/kaggle/working/scaler.save"
 ARIMA_PATH = "/kaggle/working/arima_model.pkl"
@@ -88,8 +88,8 @@ def preprocess(train_features, test_features):
 def create_sequences(data, look_back=LOOK_BACK):
     X, y = [], []
     for i in range(look_back, len(data)):
-        X.append(data[i-look_back:i, :])  # Use all features
-        y.append(data[i, 0])  # Predict residual (first feature)
+        X.append(data[i-look_back:i, :])  
+        y.append(data[i, 0])  
     X, y = np.array(X), np.array(y)
     if len(X) == 0:
         return np.empty((0, look_back, data.shape[1])), np.empty((0,))
